@@ -1,4 +1,0 @@
-censored
-========
-
-*CENSORED*
