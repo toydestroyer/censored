@@ -11,8 +11,13 @@ window.onload = function () {
     var img = new Image();
     img.src = 'jobs.jpg';
     img.onload = function(){
+        ctx.drawImage(img,0,0);
         ctx2.drawImage(img,0,0);
-        ctx.drawImage(Pixastic.process(img, "mosaic", {blockSize:10}),0,0);
+        P = new Pixastic(ctx);
+        P['mosaic']({blockSize : 8}).done(function() {
+
+        });
+        // ctx.drawImage(Pixastic.process(img, "mosaic", {blockSize:10}),0,0);
     }
     window.onmousedown = function(){
         md = true;
