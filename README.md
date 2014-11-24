@@ -1,5 +1,11 @@
 # \*CENSORED\*
 
+# Usage
+```html
+<img src="example.jpg" alt="" id="example">
+<script>var censored = new Censored("example");</script>
+```
+
 ## License
 The MIT License (MIT)
 
