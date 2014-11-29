@@ -59,6 +59,16 @@
         }
       });
 
+      document.addEventListener('keydown', function(e) {
+        if (e.altKey) {
+          er = true;
+        }
+      });
+
+      document.addEventListener('keyup', function(e) {
+        er = false;
+      });
+
     };
 
   }
