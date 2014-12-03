@@ -4,7 +4,7 @@
   function Censored(el) {
 
     this.md = false;
-    this.eraser = true;
+    this.eraser = false;
 
     var img = document.getElementById(el);
 
