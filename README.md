@@ -1,10 +1,13 @@
 # \*CENSORED\*
 
-# Usage
+## Usage
 ```html
 <img src="example.jpg" alt="" id="example">
 <script>var censored = new Censored("example");</script>
 ```
+
+## Example
+http://toydestroyer.com/censored/
 
 ## License
 The MIT License (MIT)
