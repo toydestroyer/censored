@@ -61,9 +61,20 @@
     canvas3.addEventListener('mousemove', function(e) {
       if (t.md) {
         if (t.eraser) {
-          ctx3.clearRect(e.pageX - 20, e.pageY - 20, 40, 40);
+          ctx3.clearRect(e.layerX - 20, e.layerY - 20, 40, 40);
         } else {
-          ctx3.putImageData(ctx1.getImageData(e.pageX - 20, e.pageY - 20, 40, 40), e.pageX - 20, e.pageY - 20);
+          ctx3.putImageData(ctx1.getImageData(e.layerX - 20, e.layerY - 20, 40, 40), e.layerX - 20, e.layerY - 20);
+        }
+      }
+    });
+
+    canvas3.addEventListener('mousedown', function(e) {
+      console.log(e)
+      if (t.md) {
+        if (t.eraser) {
+          ctx3.clearRect(e.layerX - 20, e.layerY - 20, 40, 40);
+        } else {
+          ctx3.putImageData(ctx1.getImageData(e.layerX - 20, e.layerY - 20, 40, 40), e.layerX - 20, e.layerY - 20);
         }
       }
     });
