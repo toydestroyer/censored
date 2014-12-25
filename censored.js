@@ -58,18 +58,11 @@
       t.md = false;
     });
 
-    canvas3.addEventListener('mousemove', function(e) {
-      if (t.md) {
-        if (t.eraser) {
-          ctx3.clearRect(e.layerX - 20, e.layerY - 20, 40, 40);
-        } else {
-          ctx3.putImageData(ctx1.getImageData(e.layerX - 20, e.layerY - 20, 40, 40), e.layerX - 20, e.layerY - 20);
-        }
-      }
-    });
+    canvas3.addEventListener('mousemove', mouseMoveEvent);
 
-    canvas3.addEventListener('mousedown', function(e) {
-      console.log(e)
+    canvas3.addEventListener('mousedown', mouseMoveEvent);
+
+    function mouseMoveEvent(e) {
       if (t.md) {
         if (t.eraser) {
           ctx3.clearRect(e.layerX - 20, e.layerY - 20, 40, 40);
@@ -77,7 +70,7 @@
           ctx3.putImageData(ctx1.getImageData(e.layerX - 20, e.layerY - 20, 40, 40), e.layerX - 20, e.layerY - 20);
         }
       }
-    });
+    }
 
     document.addEventListener('keydown', function(e) {
       if (e.altKey) {
