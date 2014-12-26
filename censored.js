@@ -1,7 +1,7 @@
 ;(function(global) {
   'use strict';
 
-  function Censored(el) {
+  function Censored(el, ratio) {
 
     this.md = false;
     this.eraser = false;
@@ -32,8 +32,8 @@
       ctx1.mozImageSmoothingEnabled = false;
       ctx1.webkitImageSmoothingEnabled = false;
       ctx1.imageSmoothingEnabled = false;
-      var w = img.width * 0.1;
-      var h = img.height * 0.1;
+      var w = img.width * (0.01 * ratio);
+      var h = img.height * (0.01 * ratio);
       ctx1.drawImage(img, 0, 0, w, h);
       ctx1.drawImage(canvas1, 0, 0, w, h, 0, 0, canvas1.width, canvas1.height);
       canvas2.height = img.height;
@@ -54,13 +54,13 @@
       t.md = true;
     });
 
+    canvas3.addEventListener('mousedown', mouseMoveEvent);
+
     canvas3.addEventListener('mouseup', function() {
       t.md = false;
     });
 
     canvas3.addEventListener('mousemove', mouseMoveEvent);
-
-    canvas3.addEventListener('mousedown', mouseMoveEvent);
 
     function mouseMoveEvent(e) {
       if (t.md) {

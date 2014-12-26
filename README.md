@@ -3,7 +3,7 @@
 ## Usage
 ```html
 <img src="example.jpg" alt="" id="example">
-<script>var censored = new Censored("example");</script>
+<script>var censored = new Censored("example", 10);</script>
 ```
 
 ## Example
