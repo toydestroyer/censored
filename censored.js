@@ -3,10 +3,16 @@
 
   function Censored(el, ratio) {
 
+    ratio = typeof ratio !== 'undefined' ? ratio : 10;
+
     this.md = false;
     this.eraser = false;
 
-    var img = document.getElementById(el);
+    if (typeof el === "string") {
+      var img = document.getElementById(el);
+    } else {
+      var img = el;
+    }
 
     var t = this;
 
