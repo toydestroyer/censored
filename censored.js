@@ -3,7 +3,7 @@
 
   function Censored(el, ratio) {
 
-    ratio = typeof ratio !== 'undefined' ? ratio : 10;
+    this.ratio = typeof ratio !== 'undefined' ? ratio : 10;
 
     this.md = false;
     this.eraser = false;
@@ -38,8 +38,8 @@
       ctx1.mozImageSmoothingEnabled = false;
       ctx1.webkitImageSmoothingEnabled = false;
       ctx1.imageSmoothingEnabled = false;
-      var w = img.width * (0.01 * ratio);
-      var h = img.height * (0.01 * ratio);
+      var w = img.width * (0.01 * t.ratio);
+      var h = img.height * (0.01 * t.ratio);
       ctx1.drawImage(img, 0, 0, w, h);
       ctx1.drawImage(canvas1, 0, 0, w, h, 0, 0, canvas1.width, canvas1.height);
       canvas2.height = img.height;
