@@ -20,12 +20,12 @@
       t.eraser = val;
     };
 
-    var canvas1 = document.createElement('canvas');
-    var ctx1 = canvas1.getContext('2d');
-    var canvas2 = document.createElement('canvas');
-    var ctx2 = canvas2.getContext('2d');
-    var canvas3 = document.createElement('canvas');
-    var ctx3 = canvas3.getContext('2d');
+    var canvas1 = document.createElement('canvas'),
+        ctx1    = canvas1.getContext('2d'),
+        canvas2 = document.createElement('canvas'),
+        ctx2    = canvas2.getContext('2d'),
+        canvas3 = document.createElement('canvas'),
+        ctx3    = canvas3.getContext('2d');
 
     img.onload = function() {
       var wrapper = document.createElement('div');
