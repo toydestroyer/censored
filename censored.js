@@ -29,7 +29,8 @@
 
     img.onload = function() {
       var wrapper = document.createElement('div');
-      wrapper.style.position = 'relative'
+      wrapper.style.position = 'relative';
+      wrapper.style.cursor = 'crosshair';
       var parent = img.parentNode;
       parent.insertBefore(wrapper, img);
       canvas1.height = img.height;
